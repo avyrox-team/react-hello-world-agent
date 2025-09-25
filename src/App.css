@@ -1,0 +1,191 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5rem;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6));
+}
+
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.app-header h1 {
+  font-size: 4rem;
+  margin: 0;
+  background: linear-gradient(135deg, #646cff 0%, #61dafb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin: 1rem 0 0 0;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.counter-card,
+.welcome-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.counter-card:hover,
+.welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.counter-card h2,
+.welcome-card h2 {
+  margin-top: 0;
+  color: #646cff;
+  font-size: 1.5rem;
+}
+
+.counter-button {
+  border-radius: 12px;
+  border: 2px solid #646cff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: linear-gradient(135deg, #646cff 0%, #61dafb 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+  min-width: 150px;
+}
+
+.counter-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(100, 108, 255, 0.4);
+}
+
+.counter-button:active {
+  transform: scale(0.98);
+}
+
+.counter-description {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 1rem 0 0 0;
+}
+
+.tech-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.tech-list li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  .app-header h1 {
+    font-size: 3rem;
+  }
+  
+  .logo-container {
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 4em;
+    padding: 1rem;
+  }
+  
+  .app-main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .counter-card,
+  .welcome-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .counter-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .logo {
+    height: 3em;
+    padding: 0.5rem;
+  }
+}
