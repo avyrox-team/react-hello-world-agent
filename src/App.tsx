@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import TodoList from './components/TodoList'
 import './App.css'
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       </header>
       
       <main className="app-main">
+        <TodoList />
+        
         <div className="counter-card">
           <h2>Interactive Counter</h2>
           <button 
